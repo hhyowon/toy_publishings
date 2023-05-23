@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap checkout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../toy_publishings/css/commons.css">
+</head>  
+<body>
+    <div class="container py-5 text-center">
+        <img  src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt width="75" height="60" >
+        <h1>Checkout form</h1>
+        <P>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a 
+        validation state that can be triggered by attempting to submit the form without completing it.</P>
+    </div>
+          
+    <div class="container pb-5">
+        <div class="row g-5">
+            <div class="col-lg-8"><!--8,4로 나눔-->
+                    <div class="fs-3">Billing address</div>            
+                    <form action="index.html"> <!-- 폼-->    
+                        <div class="m-3 w-75">
+                            <div class="row py-2">
+                                <div class="col-sm-6"><!--firstname-->
+                                        <label class="form-label" for="idfirstname">First name</label>
+                                        <input class="form-control" type="text" name="firstname" placeholder="hyowon" id="idfirstname"> 
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="idlastname">Last name</label>
+                                    <input class="form-control" type="text"  name="lastname"  placeholder="cho" id="idlastname"> 
+                                </div>
+                            </div>
+                            <div class="py-2">
+                                <lable class="form-label" for="idusername">Username</lable>
+                                <input class="form-control" type="text" placeholder="Userame" name="username" id="idusername" >
+                            </div>
+                    
+                            <div class="py-2"><!--이메일 작성-->
+                                <label class="form-label" for="idemail">Email (Optional)</label>
+                                <input class="form-control" type="email" name="emailAddress" id="idemail" placeholder="otter@yojulab.com"> 
+                            </div>
+
+                            <div class="py-2"><!--Address-->
+                                <label class="form-label" for="idaddress">Address</label>
+                                <input class="form-control" type="text" name="address"  value="39 sorae" placeholder="1234 Man St" id="idaddress"> 
+                            </div>
+                    
+                            <div class="py-2"><!--Address-->
+                                <label class="form-label" for="idaddress2">Address 2 (Optional) </label>
+                                <input class="form-control" type="text" name="address2"  value="000-000" placeholder="Apartment or suite" id="idaddress2"> 
+                            </div>
+
+                            <div class="row py-2">
+                                <div class="col-md-5">
+                                    <div><!--Country select로 선택하기-->
+                                        <label class="form-label" for="idcountry">Country </label> <!--form-select 방향키나옴-->
+                                        <select  class="form-select"  name ="country" id="idcountry"> <!--choose값은 넘어가지 않기 위해서 value 공백으로 설정 -->
+                                            <option disabled selected value="">Choose...</option> <!--아예 선택못하게 disabled 선택 비활성화함-->
+                                            <option value="France">France</option>
+                                            <option value="Korea" >Korea</option>
+                                            <option value="China">China</option>
+                                            <option value="USA ">USA</option>
+                                            <option value="Germany ">Germany</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div><!--State select로 선택하기-->
+                                        <label class="form-label" for="idstate">State </label>
+                                        <select  class="form-select"  name ="state" id="idstate"> 
+                                            <option disabled selected value="">Choose...</option>
+                                            <option value="gyeonggi-do">Gyeonggi-do</option>
+                                            <option value="chungcheong-do" >Chungcheong-do</option>
+                                            <option value="gangwon-do">Gangwon-do</option>
+                                        </select>
+            
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div><!--zip-->
+                                            <label class="form-label" for="zip">Zip </label>
+                                            <input class="form-control" type="text" name="zip " placeholder="123455" id="idzip"> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                                <div><!--shippingaddress 체크박스 -->
+                                    <input type="checkbox" name="shippingaddress" checked  id ="idshippingaddress" value ="checked" > 
+                                    <label for="idshippingaddress"> Shipping address is the same as my biling address</label>
+                                </div>
+                                <div><!--savethisinformation 체크박스-->
+                                    <input type="checkbox" name="savethisinformation"  id ="idsavethisinformation"  >
+                                    <label for="idsavethisinformation">Save this information for next time</label>
+                                    
+                                </div>
+                            <hr>
+                            <H3>Payment</H3>
+                            <div class="m-3 form-check"> <!--선택1-->
+                                <input type="radio" name="payment" value="creditcard"  class="form-check-input">
+                                <lable for="" class="form-check-label">Edge</lable>
+                            </div>
+
+                            <div class="m-3 form-check"> <!--선택2--> 
+                                <input type="radio" name="payment" value="debitcard"  class="form-check-input">
+                                <lable for="" class="form-check-label">Chrome</lable>
+                             </div>
+
+                            <div class="m-3 form-check">  <!--선택3-->
+                                <input type="radio"  name="payment" value="paypal" class="form-check-input">
+                                <lable for="" class="form-check-label">Safari</lable>
+                            </div>
+
+                            <div class="row py-2">
+                                <div class="col-sm-6"><!--Name on card-->
+                                    <label class="form-label" for="idnameoncard">Name on card</label>
+                                    <input class="form-control" type="text" name="nameoncard"  placeholder="shinhan" id="idnameoncard"> 
+                                </div>
+
+                                <div class="col-sm-6"><!--Credit card number-->
+                                    <label class="form-label" for="idcreditcardnumber">Credit card number </label>
+                                    <input class="form-control" type="text" name="creditcardnumber"  placeholder="123-456-7889" id="idcreditcardnumber"> 
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-sm-4"> <!--Expiration-->
+                                    <label class="form-label" for="idex">Expiration</label>
+                                    <input class="form-control" type="text" name="cvv"  placeholder="123"  id="idex">
+                                </div>
+
+                                <div class="col-sm-4"><!--CVV-->
+                                    <label class="form-label" for="idcvv">CVV</label>
+                                    <input class="form-control" type="text" name="cvv"  placeholder="123"  id="idcvv"> 
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                      
+                        <div>
+                            <button type="submit" class="w-75 btn btn-primary" >Continu to checkout</button>
+                        </div>
+                    </form>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="fs-3 text-primary">Your cart</div>
+                    <nav class="navbar">
+                        <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                            <a href="" class="nav-link">Product name</a>
+                            <a href="" class="nav-link">Second product</a>
+                            <a href="" class="nav-link">Third item</a>
+                            <a href="" class="nav-link">Promo code</a>
+                            <a href="" class="nav-link">Total (USD)</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>
